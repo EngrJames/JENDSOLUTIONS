@@ -4,7 +4,7 @@ var request;
 
 // Bind to the submit event of our form
 $("#form").submit(function (event) {
-
+    document.getElementById("revolver").innerHTML = "<img src=\"img/revolver.gif\" alt=\"image\" class=\"revolveme\">";
     // Abort any pending request
     if (request) {
         request.abort();

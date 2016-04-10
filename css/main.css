@@ -4166,6 +4166,9 @@ noindex:-o-prefocus, .main-nav { /* opera hack */
 	text-align: center;
 	transition: left 0.3s;
 }
+.revolveme{
+    margin: 300px;
+}
 .block-portfolio-3 ul span em {
 	position: absolute;
 	right: 0;
@@ -4641,7 +4644,7 @@ noindex:-o-prefocus, .main-nav { /* opera hack */
 	color: #2d3e50;
 }
 .block-portfolio-7 ul a:first-child {
-	margin-top: 0;
+	margin-top:40px; /**0;**/
 }
 .block-portfolio-7 ul img {
 	display: block;
@@ -4673,16 +4676,37 @@ noindex:-o-prefocus, .main-nav { /* opera hack */
 	.block-portfolio-7 ul li {
 		width: 33.33%;
 	}
+.revolveme{
+    margin: 150px;
+}
 }
 @media screen and (max-width: 767px) { /* phone */
+    #portfolio{
+    display: none;
+}
+#port{
+    display: none;
+}
 	.block-portfolio-7 ul li {
 		width: 50%;
 	}
+.revolveme{
+    margin: 100px;
+}
 }
 @media screen and (max-width: 479px) { /* mini phone */
+#portfolio{
+    display: none;
+}
+#port{
+    display: none;
+}
 	.block-portfolio-7 ul li {
 		width: 100%;
 	}
+.revolveme{
+    margin: 100px;
+}
 }
 
 /**/
