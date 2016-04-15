@@ -322,6 +322,7 @@ label.error {
 	line-height: 14px;
 	color: #2d3e50;
 }
+
 .radio i:before {
 	content: '';
 	position: absolute;
@@ -341,10 +342,12 @@ label.error {
 .checkbox input {
 	display: none;
 }
+
 .radio input:checked + i:before,
 .checkbox input:checked + i:before {
 	opacity: 1;
 }
+
 .button {
 	display: inline-block;
 	border: 2px solid #2d3e50;
@@ -536,7 +539,7 @@ label.error {
 }
 .page-header-top {
 	padding: 4px 0;
-	background: #2d3e50;
+	background: #242222; /**#2d3e50;**/
 	text-align: right;
 }
 .page-header-bottom {
@@ -678,7 +681,7 @@ noindex:-o-prefocus, .page-header-bottom + div { /* opera hack */
 	left: 0;
 	background-position: 50% 50%;
 	background-size: cover;
-	opacity: 0.5;
+	opacity: 1;
     filter: alpha(opacity=50); /* For IE8 and earlier */
 }
 .page-footer-section {
@@ -1391,6 +1394,8 @@ noindex:-o-prefocus, .main-nav { /* opera hack */
 	text-decoration: none;
 	text-transform: uppercase;
 	color: #fff;
+    width: 102px;/**just added*/
+    z-index: 1000;/**just added*/
 }
 .main-nav .switcher i {
 	display: block;
@@ -1424,12 +1429,18 @@ noindex:-o-prefocus, .main-nav { /* opera hack */
 		float: none;
 		margin: 0 -20px;
 	}
+#scroll-nav {
+		position: fixed;
+        margin-top: -20px;
+        right: 5px;
+        width: 119px;
+        z-index: 1000;
+	}
 	.main-nav ul {
 		display: none;
 		background: #2d3e50;
 		font-size: 10px;
 		line-height: 30px;
-        
 	}
 	.main-nav li {
 		float: none;
@@ -1528,7 +1539,6 @@ noindex:-o-prefocus, .main-nav { /* opera hack */
 		border-top: 1px solid #2d3e50;		
 	}
 }
-
 
 /**/
 /* page title */
@@ -5362,6 +5372,11 @@ noindex:-o-prefocus, .main-nav { /* opera hack */
 	}
 }
 
+@media screen and (min-width: 1202px) {
+    .block-portfolio-7 ul img {
+        opacity: 0.5;
+    }
+}
 /**/
 /* testimonials 4 */
 /**/
@@ -11541,7 +11556,7 @@ noindex:-o-prefocus, .main-nav { /* opera hack */
 	font-size: 12px;
 	line-height: 18px;
 	text-align: center;
-	text-transform: uppercase;
+	text-transform: none;/**uppercase;**/
 	color: #fff;
 	transition: background 0.3s;
 }
@@ -11783,7 +11798,27 @@ noindex:-o-prefocus, .main-nav { /* opera hack */
 		text-align: center;
 	}
 }
+@media screen and (max-width: 999px) and (min-width: 768px) { /* pad */
+.main-nav li {
+	margin-left: 1px;
+}
+.main-nav {
+	font-size: 8px;
+}
+.mylogo {
+    width: 160px;
+    height: 45px;
+}
+}
 
+@media screen and (max-width: 1200px) and (min-width: 1000px) { /* pad */
+.main-nav li {
+	margin-left: 2px;
+}
+.main-nav {
+	font-size: 9px;
+}
+}
 sup {font-size:xx-small; vertical-align:super;}
 
 .asterisk_input:after {

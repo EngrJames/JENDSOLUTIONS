@@ -7,11 +7,11 @@ $(document).ready(function () {
         var offset = menuYloc + $(document).scrollTop() + "px";
         $(name).animate({ top: offset }, { duration: 0, queue: false });
     });
-    $(".switcher").click(function () {
+   /** $(".switcher").click(function () {
         setTimeout(function() {
         $(document.body).scrollTop(0);
     }, 400);
 
     });
-    
+    **/
 });

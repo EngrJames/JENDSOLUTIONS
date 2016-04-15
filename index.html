@@ -41,6 +41,7 @@
 		<link rel="stylesheet" href="css/jquery.owl.carousel.css">
 		<link rel="stylesheet" href="js/rs-plugin/css/settings.css">
 		<link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/style.css">
 		<!--/ styles -->
 	</head>
 	
@@ -59,9 +60,62 @@
 					<!--/ follow us -->
 					
 					<!--Login -->
-					<a href="coming-soon.html" class="cart-summary" style="text-decoration: none;"><i class="fa fa-user"></i>Login</a>
+					<a class="cart-summary" style="text-decoration: none;" id="logme"><i class="fa fa-user"></i>Login</a>
+                   
 					<!--/ Login -->
 				</div>
+
+                <div id="first">
+                 <section class="main" style="float: right;">
+				<form action="coming-soon.html"class="form-3" id="login" style="position:fixed;z-index: 1050">
+				    <p class="clearfix">
+				        <input type="text" name="name" id="name" placeholder="USERNAME">
+				    </p>
+				    <p class="clearfix">
+				        <input type="password" name="password" id="password" placeholder="PASSWORD"> 
+				    </p>
+				  
+                    <p class="clearfix">
+                        <input type="submit" name="submit" value="Register" id="register" onclick="javascript:return false">
+                        <input type="submit" name="submit" value="Facebook login">
+				    </p>      
+                    <p class="clearfix">
+				        <input type="submit" name="submit" value="Sign in">
+                        <input type="submit" name="submit" value="Google login">
+                       </p>                    
+				</form>​
+			</section>
+                    </div>
+
+                <div id="second">
+                <section class="main" style="float: right;">
+				<form action="coming-soon.html" class="form-3" id="register" style="position:fixed;z-index: 1050">
+				    <p class="clearfix">
+				        
+				        <input type="text" name="username" id="username" placeholder="PREFERRED USERNAME">
+				    </p>
+                    <p class="clearfix">
+				        <input type="text" name="email" id="email" placeholder="EMAIL"> 
+				    </p>
+                    <p class="clearfix">
+				        <input type="password" name="password" id="password" placeholder="PASSWORD"> 
+				    </p>
+				    <p class="clearfix">
+				        <input type="password" name="password" id="password" placeholder="CONFIRM"> 
+				    </p>
+                    <p class="clearfix">
+				        <input type="text" name="phone" id="phone" placeholder="PHONE NO"> 
+				    </p>
+
+				  
+                    
+                        <input type="submit" name="submit" value="Cancel" style="float: left;width: 50%" id="cancel" onclick="javascript:return false">
+                      <input type="submit" name="submit" value="Submit" style="width: 50%">
+				         
+				</form>​
+			</section>
+                    </div>
+                
 			</div>
 			<!--/ page header top -->
 			
@@ -90,9 +144,12 @@
 					</nav>
 					<!--/ main nav -->
 				</div>
+
 			</header>
 			<div></div>
 			<!--/ page header bottom -->
+
+
 			
 			<!-- slideshow -->
 			<div class="slider-revolution">
@@ -618,7 +675,7 @@
 								
 								<ul>
                                     <li class="item item-web">
-										<img src="pic/portfolio/project.jpg" style="width:289px; height:222px" alt="image">
+										<img src="pic/portfolio/project.jpg" style="width:289px; height:222px;" alt="image">
 										<div>
 											<a href="pic/portfolio/columbus.png" rel="fancybox" class="fancybox fa fa-search-plus"></a>
 											<!--<a href="#" class="fa fa-link"></a>-->
@@ -723,12 +780,12 @@
 								<div class="grid-col grid-col-6">
 									<h3>Our Services</h3>
 									<p style="text-align: justify">The prices for our services may vary based on the scope of the contract. These prices are very considerable, reasonable and affordable compared to other software outsourcing companies. In other words, it is cheaper. Give us a try today, and be rest assured you will never be dissapointed.</p>
-<p style="text-align: justify">If you, for some reason, have an issue with our service, notify us and we will rectify the issue immediately. We also have money-back policy. For more information, please, read our terms and conditions.</p>
+<p style="text-align: justify">If you, for some reason, have an issue with our service, notify us and we will rectify the issue immediately. We also have money-back policy. For more information, please, read our <a href="javascript:Popup()" style="text-decoration: none;color: #000">terms and conditions</a>.</p>
 								</div>
 								<div class="grid-col grid-col-6">
 									<h3>Our Off-The-Shelf Apps</h3>
-									<p style="text-align: justify">The off-the-shelf applications are non-customized pre-developed applications. These applications are designed to boost, automate, ease and enable your businesses to grow and make more turn over. Apart from business, you can use them for your own personal benefits. They can be accessed once you <a href="coming-soon.html" style="text-decoration: none;">login.</a></p>
-                                    <p style="text-align: justify">Our off-the-shelf applications have fixed prices but are very cheap and affordable. Our terms and conditions apply to these applications.</p>
+									<p style="text-align: justify">The off-the-shelf applications are non-customized pre-developed applications. These applications are designed to boost, automate, ease and enable your businesses to grow and make more turn over. Apart from business, you can use them for your own personal benefits. They can be accessed once you <a href="coming-soon.html" style="text-decoration: none;color: #000">login.</a></p>
+                                    <p style="text-align: justify">Our off-the-shelf applications have fixed prices but are very cheap and affordable. Our <a href="javascript:Popup()" style="text-decoration: none;color: #000">terms and conditions</a> apply to these applications.</p>
                                     
 								</div>
 							</div>
@@ -757,7 +814,7 @@
 										
 										<p style="text-align: justify">A dynamic, highly accomplished, result-driven senior level software engineer with eighteen years <sup>plus</sup> experience. I create high industrial standard and rich applications, including mobile applications, web applications and application packages. My main goal is to satisfy clients’ demands on time, with an overarching quality results.
                                            Besides software engineering, I have a very good knowledge of networking and how to implement it protocols in software solutions, and also an excellent knowledge of database system. On a personal level I have the ability to stay organized and on top of my work at all times.<br><br>
-                                        In addition to this, I am constantly seeking to improve my skills and am fully aware of the latest developments in the field of software, database and networking. For more details, visit my <a href="http://www.mypersonalprofile.ga" target="_blank">Profile</a>.
+                                        In addition to this, I am constantly seeking to improve my skills and am fully aware of the latest developments in the field of software, database and networking. For more details, visit my <a href="http://www.mypersonalprofile.ga" target="_blank" style="text-decoration: none;color: #000">Profile</a>.
                                         </p>
 									</div>
 								</div>
@@ -790,7 +847,7 @@
 						<!-- subscription -->
 						<div class="widget-subscription clearfix">
 							<div class="head" style="font-size: medium"><i class="fa fa-edit"></i>Subscribe to our Newsletter</div>
-							<form action="coming-soon.html">
+							<form id="form1">
 								<input type="text" placeholder="Subscribe with email">
 								<button type="submit" class="button">SUBMIT</button>
 							</form>
@@ -864,11 +921,11 @@
 					<div class="grid-row">
 						<!-- social nav -->
 						<div class="social-nav">							
-							<a href="coming-soon.html"><i class="fa fa-twitter"></i></a><!--
-							--><a href="coming-soon.html"><i class="fa fa-facebook"></i></a><!--
-							--><a href="coming-soon.html"><i class="fa fa-linkedin-square"></i></a><!--
-							--><a href="coming-soon.html"><i class="fa fa-google-plus"></i></a><!--
-							--><a href="coming-soon.html"><i class="fa fa-youtube"></i></a>
+							<a href="https://twitter.com/b7a9b863916141e" target="_blank"><i class="fa fa-twitter"></i></a><!--
+							--><a href="https://www.facebook.com/jendsolutions/info/?tab=page_info" target="_blank"><i class="fa fa-facebook"></i></a><!--
+							--><a href="https://www.linkedin.com/company/jend-solutions?trk=top_nav_home" target="_blank"><i class="fa fa-linkedin-square"></i></a><!--
+							--><a href="https://plus.google.com/u/0/b/115843926085770876704/115843926085770876704/about" target="_blank"><i class="fa fa-google-plus"></i></a><!--
+							--><a href="https://www.youtube.com/channel/UCYksRB8Ykk_NIszFs5JLyZA/about#" target="_blank"><i class="fa fa-youtube"></i></a>
 						</div>	
 						<!--/ social nav -->						
 					</div>
@@ -876,7 +933,7 @@
 				<div class="page-footer-section">
 					<div class="grid-row">
 						<!-- copyrights -->
-						<div class="copyrights">@ Copyright 2016, JEND SOLUTIONS, All Rights Reserved.<a href="coming-soon.html"> Privacy Policy</a> | <a href="coming-soon.html">Terms & Conditions</a></div>
+						<div class="copyrights">@ Copyright 2016, JEND SOLUTIONS, All Rights Reserved.<a href="coming-soon.html" style="text-decoration: none"> Privacy Policy</a> | <a href="coming-soon.html" style="text-decoration: none">Terms & Conditions</a></div>
 						<!--/ copyrights -->
 						
 						<!-- secondary nav -->
@@ -926,6 +983,17 @@
         <script src="js/mobileScroll.js"></script>
         <script src="js/check.js"></script>
         <script src="js/sendData.js"></script>
+       <script src="js/formSlide.js"></script>
+         <script lang="JavaScript">
+<!--
+function Popup()
+{
+  var popupURL ="policy/conditions.html";
+  var popup = window.open(popupURL,"Popup",'toolbar=0,location=0,directories=0,status=0,menubar=0,scrollbars=0,resizable=0,width=630,height=450');
+}
+// -->
+</script>
         <!--/ scripts --> 
+
 	</body>
 </html>
