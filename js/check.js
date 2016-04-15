@@ -37,7 +37,8 @@ function validateForm1() {
        bool = false;
        document.getElementById("name").style.borderColor = "red";
        $("#name").focus(function () {
-        $(this).css('border-color', '#51cbee');
+           $(this).css('border-color', '#51cbee');
+       });
     $("#name").blur(function () {
         $(this).css('border-color', '#000');
     });
@@ -53,22 +54,6 @@ function validateForm1() {
     });
    }
 
-  /** // select all desired input fields and attach tooltips to them
-      $("#login :input").tooltip({
- 
-      // place tooltip on the left edge
-      position: "center left",
-      
-      // a little tweaking of the position
-      offset: [-2, 10],
- 
-      // use the built-in fadeIn/fadeOut effect
-      effect: "fade",
- 
-      // custom opacity setting
-      opacity: 0.6
- 
-      });**/
         return bool;
 }
 
@@ -127,6 +112,6 @@ function validateForm2() {
         $(this).css('border-color', '#000');
     });
   }
-   
         return bool;
+
 }
