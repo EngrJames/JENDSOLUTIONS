@@ -42,6 +42,12 @@
 		<link rel="stylesheet" href="js/rs-plugin/css/settings.css">
 		<link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/jquery-ui.css">
+        <link rel="stylesheet" href="css/jquery-ui.min.css">
+        <link rel="stylesheet" href="css/jquery-ui.structure.css">
+        <link rel="stylesheet" href="css/jquery-ui.structure.min.css">
+        <link rel="stylesheet" href="css/jquery-ui.theme.css">
+        <link rel="stylesheet" href="css/jquery-ui.theme.min.css">
 		<!--/ styles -->
 	</head>
 	
@@ -67,12 +73,12 @@
 
                 <div id="first">
                  <section class="main" style="float: right;">
-				<form action="coming-soon.html"class="form-3" id="login" style="position:fixed;z-index: 1050">
+				<form action="coming-soon.html" class="form-3" id="login" style="position:fixed;z-index: 1050">
 				    <p class="clearfix">
-				        <input type="text" name="name" id="name" placeholder="USERNAME">
+				        <input type="text" name="name" id="name" placeholder="USERNAME" title="5 to 15 characters. Only alphanumeric with _ or -">
 				    </p>
 				    <p class="clearfix">
-				        <input type="password" name="password" id="password" placeholder="PASSWORD"> 
+				        <input type="password" name="password" id="password" placeholder="PASSWORD" title="5 to 15 characters. Only alphanumeric with _ or -"> 
 				    </p>
 				  
                     <p class="clearfix">
@@ -80,7 +86,7 @@
                         <input type="submit" name="submit" value="Facebook login">
 				    </p>      
                     <p class="clearfix">
-				        <input type="submit" name="submit" value="Sign in">
+				        <input type="submit" name="submit" value="Sign in" onclick="javascript:return validateForm1()">
                         <input type="submit" name="submit" value="Google login">
                        </p>                    
 				</form>​
@@ -89,28 +95,28 @@
 
                 <div id="second">
                 <section class="main" style="float: right;">
-				<form action="coming-soon.html" class="form-3" id="register" style="position:fixed;z-index: 1050">
+				<form action="coming-soon.html" class="form-3" id="regist" style="position:fixed;z-index: 1050">
 				    <p class="clearfix">
 				        
-				        <input type="text" name="username" id="username" placeholder="PREFERRED USERNAME">
+				        <input type="text" name="name" id="namee" placeholder="PREFERRED USERNAME" title="5 to 15 characters. Only alphanumeric with _ or -">
 				    </p>
                     <p class="clearfix">
-				        <input type="text" name="email" id="email" placeholder="EMAIL"> 
+				        <input type="text" name="email" id="email" placeholder="EMAIL" title="The email must be valid. Must include @"> 
 				    </p>
                     <p class="clearfix">
-				        <input type="password" name="password" id="password" placeholder="PASSWORD"> 
+				        <input type="password" name="password" id="password1" placeholder="PASSWORD" title="5 to 15 characters. Only alphanumeric with _ or -"> 
 				    </p>
 				    <p class="clearfix">
-				        <input type="password" name="password" id="password" placeholder="CONFIRM"> 
+				        <input type="password" name="password" id="password2" placeholder="CONFIRM" title="The two passwords must match"> 
 				    </p>
                     <p class="clearfix">
-				        <input type="text" name="phone" id="phone" placeholder="PHONE NO"> 
+				        <input type="text" name="phone" id="phone" placeholder="PHONE NO" title="must be a valid phone number with at least 7 digits"> 
 				    </p>
 
 				  
                     
                         <input type="submit" name="submit" value="Cancel" style="float: left;width: 50%" id="cancel" onclick="javascript:return false">
-                      <input type="submit" name="submit" value="Submit" style="width: 50%">
+                      <input type="submit" name="submit" value="Submit" style="width: 50%" onclick="javascript: return validateForm2()">
 				         
 				</form>​
 			</section>
@@ -847,7 +853,7 @@
 						<!-- subscription -->
 						<div class="widget-subscription clearfix">
 							<div class="head" style="font-size: medium"><i class="fa fa-edit"></i>Subscribe to our Newsletter</div>
-							<form id="form1">
+							<form action="coming-soon.html" id="form1">
 								<input type="text" placeholder="Subscribe with email">
 								<button type="submit" class="button">SUBMIT</button>
 							</form>
@@ -984,6 +990,9 @@
         <script src="js/check.js"></script>
         <script src="js/sendData.js"></script>
        <script src="js/formSlide.js"></script>
+        <script src="js/jquery-ui.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
+        <script src="js/leanModal-modified-for-onload.js"></script>
          <script lang="JavaScript">
 <!--
 function Popup()
