@@ -4,10 +4,28 @@ function validatePhoneNo(pNumberInput)
       return phoneNumber.test(pNumberInput);
    }   
 
-   function validateName(nameInput)  
+   function validateUsername(nameInput)  
    {
        var name = /^[a-zA-Z0-9\_-]{5,15}$/;
       return name.test(nameInput);
+   }
+   
+   function validateName(nameInput)  
+   {
+       var name = /^[a-zA-Z\ ]{3,50}$/;
+      return name.test(nameInput);
+   }   
+
+   function validateAddress(addressInput)  
+   {
+       var address = /^[a-zA-Z0-9\_@+-. :"!£$%^&*()=<>'#~,?;{}'\[\]\/]{8,200}$/;
+      return address.test(addressInput);
+   }   
+
+   function validateText(textInput)  
+   {
+       var text = /^[a-zA-Z0-9\_@+-. :"!£$%^&*()=<>'#~,?;{}\[`\]\/]{5,2000}$/;
+      return text.test(textInput);
    }   
 
 
@@ -18,8 +36,101 @@ function validateEmail(email) {
 
 
 function validateForm() {
+    var bool=true;
    var x = document.getElementById("form");
-        if((x.elements[1].value !=="")&& ((x.elements[3].value!=="")||(x.elements[4].value!=="")) 
+   if(x.elements[1].value ==="" || !validateName(x.elements[1].value)){
+       bool = false;
+       x.elements[1].style.borderColor = "red";
+       $(x.elements[1]).focus(function () {
+           $(this).css('border-color', '#51cbee');
+       });
+    $(x.elements[1]).blur(function () {
+        $(this).css('border-color', '#ddd');
+    });
+   }
+
+   if(x.elements[2].value ==="" || !validateAddress(x.elements[2].value)){
+       bool = false;
+       x.elements[2].style.borderColor = "red";
+       $(x.elements[2]).focus(function () {
+           $(this).css('border-color', '#51cbee');
+       });
+    $(x.elements[2]).blur(function () {
+        $(this).css('border-color', '#ddd');
+    });
+   }
+
+   if(!(x.elements[7].checked || x.elements[8].checked)){
+       bool = false;
+   }
+
+   if (x.elements[7].checked) {
+       if (x.elements[3].value === "" || !validatePhoneNo(x.elements[3].value)) {
+           bool = false;
+           x.elements[3].style.borderColor = "red";
+           $(x.elements[3]).focus(function () {
+               $(this).css('border-color', '#51cbee');
+           });
+           $(x.elements[3]).blur(function () {
+               $(this).css('border-color', '#ddd');
+           });
+       }
+   }else  if (!(x.elements[3].value == "" || validatePhoneNo(x.elements[3].value))) {
+           bool = false;
+           x.elements[3].style.borderColor = "red";
+           $(x.elements[3]).focus(function () {
+               $(this).css('border-color', '#51cbee');
+           });
+           $(x.elements[3]).blur(function () {
+               $(this).css('border-color', '#ddd');
+           });
+       }
+
+   if (x.elements[8].checked) {
+       if (x.elements[4].value === "" || !validateEmail(x.elements[4].value)) {
+           bool = false;
+           x.elements[4].style.borderColor = "red";
+           $(x.elements[4]).focus(function () {
+               $(this).css('border-color', '#51cbee');
+           });
+           $(x.elements[4]).blur(function () {
+               $(this).css('border-color', '#ddd');
+           });
+       }
+   }else if (!(x.elements[4].value === "" || validateEmail(x.elements[4].value))) {
+           bool = false;
+           x.elements[4].style.borderColor = "red";
+           $(x.elements[4]).focus(function () {
+               $(this).css('border-color', '#51cbee');
+           });
+           $(x.elements[4]).blur(function () {
+               $(this).css('border-color', '#ddd');
+           });
+       }
+
+        if (x.elements[5].value === "Message type...") {
+           bool = false;
+           x.elements[5].style.borderColor = "red";
+           $(x.elements[5]).focus(function () {
+               $(this).css('border-color', '#51cbee');
+           });
+           $(x.elements[5]).blur(function () {
+               $(this).css('border-color', '#ddd');
+           });
+       }
+
+        if (x.elements[6].value === "" || !validateText(x.elements[6].value)) {
+           bool = false;
+           x.elements[6].style.borderColor = "red";
+           $(x.elements[6]).focus(function () {
+               $(this).css('border-color', '#51cbee');
+           });
+           $(x.elements[6]).blur(function () {
+               $(this).css('border-color', '#ddd');
+           });
+       }
+
+       /** if((x.elements[1].value !=="")&& ((x.elements[3].value!=="")||(x.elements[4].value!=="")) 
         &&(x.elements[5].value!=="Message type...")&&(x.elements[6].value!=="")&&((x.elements[7].checked && x.elements[3].value!=="" && validatePhoneNo(x.elements[3].value))
         ||(x.elements[8].checked && x.elements[4].value!=="" && validateEmail(x.elements[4].value))))
         {
@@ -27,29 +138,30 @@ function validateForm() {
         }else{
         document.getElementById("warning").innerHTML = "<p style=\"color:red; text-align:center;\">All information must be correct.</p>";
         return false;
-        }
+        }**/
+       return bool;
 }
 
 function validateForm1() {
     var bool=true;
    var x = document.getElementById("login");
-   if(x.elements[0].value ==="" || !validateName(x.elements[0].value)){
+   if(x.elements[0].value ==="" || !validateUsername(x.elements[0].value)){
        bool = false;
-       document.getElementById("name").style.borderColor = "red";
-       $("#name").focus(function () {
+       x.elements[0].style.borderColor = "red";
+       $(x.elements[0]).focus(function () {
            $(this).css('border-color', '#51cbee');
        });
-    $("#name").blur(function () {
+    $(x.elements[0]).blur(function () {
         $(this).css('border-color', '#000');
     });
    }
-   if(x.elements[1].value ==="" || !validateName(x.elements[1].value)){
+   if(x.elements[1].value ==="" || !validateUsername(x.elements[1].value)){
        bool = false;
-       document.getElementById("password").style.borderColor = "red";
-       $("#password").focus(function () {
+       x.elements[1].style.borderColor = "red";
+       $(x.elements[1]).focus(function () {
         $(this).css('border-color', '#51cbee');
     });
-    $("#password").blur(function () {
+    $(x.elements[1]).blur(function () {
         $(this).css('border-color', '#000');
     });
    }
@@ -60,55 +172,55 @@ function validateForm1() {
 function validateForm2() {
     var bool=true;
    var x = document.getElementById("regist");
-   if(x.elements[0].value =="" || !validateName(x.elements[0].value)){
+   if(x.elements[0].value =="" || !validateUsername(x.elements[0].value)){
        bool = false;
-       document.getElementById("namee").style.borderColor = "red";
-       $("#namee").focus(function () {
+       x.elements[0].style.borderColor = "red";
+       $(x.elements[0]).focus(function () {
         $(this).css('border-color', '#51cbee');
     });
-    $("#namee").blur(function () {
+    $(x.elements[0]).blur(function () {
         $(this).css('border-color', '#000');
     });
   }
 
    if(x.elements[1].value =="" || !validateEmail(x.elements[1].value)){
        bool = false;
-       document.getElementById("email").style.borderColor = "red";
-       $("#email").focus(function () {
+       x.elements[1].style.borderColor = "red";
+       $(x.elements[1]).focus(function () {
         $(this).css('border-color', '#51cbee');
     });
-    $("#email").blur(function () {
+    $(x.elements[1]).blur(function () {
         $(this).css('border-color', '#000');
     });
   }
 
-  if(x.elements[2].value =="" || !validateName(x.elements[2].value)){
+  if(x.elements[2].value =="" || !validateUsername(x.elements[2].value)){
        bool = false;
-       document.getElementById("password1").style.borderColor = "red";
-       $("#password1").focus(function () {
+       x.elements[2].style.borderColor = "red";
+       $(x.elements[2]).focus(function () {
         $(this).css('border-color', '#51cbee');
     });
-    $("#password1").blur(function () {
+    $(x.elements[2]).blur(function () {
         $(this).css('border-color', '#000');
     });
   }else if(x.elements[2].value !== x.elements[3].value){
   bool = false;
-  document.getElementById("password2").style.borderColor = "red";
-       $("#password2").focus(function () {
+  x.elements[3].style.borderColor = "red";
+       $(x.elements[3]).focus(function () {
         $(this).css('border-color', '#51cbee');
     });
-    $("#password2").blur(function () {
+    $(x.elements[3]).blur(function () {
         $(this).css('border-color', '#000');
     });
   }
 
   if(x.elements[4].value =="" || !validatePhoneNo(x.elements[4].value)){
        bool = false;
-       document.getElementById("phone").style.borderColor = "red";
-       $("#phone").focus(function () {
+       x.elements[4].style.borderColor = "red";
+       $(x.elements[4]).focus(function () {
         $(this).css('border-color', '#51cbee');
     });
-    $("#phone").blur(function () {
+    $(x.elements[4]).blur(function () {
         $(this).css('border-color', '#000');
     });
   }

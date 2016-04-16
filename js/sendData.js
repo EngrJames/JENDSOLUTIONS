@@ -48,7 +48,7 @@ $("#form").submit(function (event) {
             "The following error occurred: " +
             textStatus, errorThrown
         );
-        document.getElementById("warning").innerHTML = "<b style=\"color:red; text-align:center\">An error has occurred. Check your console for the error code!</b>";
+        document.getElementById("error").innerHTML = "<b style=\"color:red; text-align:center\">An error has occurred. Check your console for the error code!</b>";
         //Error message
     });
 

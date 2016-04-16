@@ -896,10 +896,10 @@
 										</select>
 									</div>
                                 
-                               <div class="input"><input type="text" name="Name" placeholder="Your Name" required></span></div>
-                                <div class="input"><input type="text" placeholder="Your Address" name="Address"></span></div>
-								<div class="input"><input type="text" placeholder="Your Phone No" name="Phone No" required></div>
-                                <div class="input" style="padding-bottom: 10px"><input type="text" placeholder="Your Email" name="Email" required></div>
+                               <div class="input"><input type="text" name="Name" placeholder="Your Name" title="At least 3 characters. Only alphabets and spaces."></span></div>
+                                <div class="input"><input type="text" placeholder="Your Address" name="Address" title="At least 8 characters"></span></div>
+								<div class="input"><input type="text" placeholder="Your Phone No" name="Phone No" title="At least 7 digits. only numbers and +"></div>
+                                <div class="input" style="padding-bottom: 10px"><input type="text" placeholder="Your Email" name="Email" title="Must include @ and ."></div>
                                 <div class="select">
                                   
 										<select id="Topic" name="Topic" style="color: #a5a1a1;background-color: none;">
@@ -910,16 +910,16 @@
 										</select>
 									</div>
                                 
-                              	<div class="input" style="padding-bottom: 10px;"><textarea cols="30" rows="5" placeholder="Your Message" name="Message" required></textarea></div>
-                              <div style="color: #fff"> <div style="float: left;">Preferred Contact?</div><br>
-                                 <label class="radio fa fa-phone" style="float:left;padding-right:10px"><input type="radio" name="Preferred Contact" value="Phone"><i></i></label>
+                              	<div class="input" style="padding-bottom: 10px;"><textarea cols="30" rows="5" placeholder="Your Message" name="Message" title="At least 5 characters"></textarea></div>
+                              <div style="color: #fff"> <div style="float: left;" title="Must select one">Preferred Contact?</div><br>
+                                 <label class="radio fa fa-phone" style="float:left;padding-right:10px"><input type="radio" name="Preferred Contact" value="Phone" title=""><i></i></label>
                                 <label class="radio fa fa-envelope" style="float:left"><input type="radio" name="Preferred Contact" value="Email"><i></i></label><br><br></div>
 								<button type="submit" onclick="return validateForm()" class="button">Send</button>
 							</form>
 							<!--/ feedback -->
-                                    <div id="warning"></div>
                             </div>
                         </div>
+                            <div id="error"></div>
 						</div>
                         
 					</div>
