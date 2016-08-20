@@ -48,7 +48,7 @@ var APP_ID;
 		  cookie : true, // enable cookies to allow the server to access the session
 		  xfbml  : true,  // parse XFBML
           oauth:true,
-         channelUrl: window.location+'home',
+         
          version : 'v2.5' // use graph api version 2.5 
 		});
 
