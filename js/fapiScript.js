@@ -95,7 +95,7 @@ var APP_ID;
 		var loginUrl="https://www.facebook.com/dialog/oauth/?"+
 			"scope=public_profile,email&"+
 			"client_id="+APP_ID+"&"+
-			/*"redirect_uri="+document.location+"home&"+*/
+			"redirect_uri="+document.location+"home&"+
 			"response_type=token&"+
 			"display=popup";
 		
