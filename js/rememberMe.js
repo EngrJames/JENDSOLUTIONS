@@ -1,0 +1,1 @@
+$(document).ready(function(){var e;$("#remember").change(function(){$(this).is(":checked")&&(e=$(this).is(":checked")),$(this).is(":unchecked")&&(e=$(this).is(":checked")),localStorage.setItem("rememberMe",e)})});

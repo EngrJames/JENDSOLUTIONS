@@ -1,0 +1,1 @@
+function updateProPic(){var r=localStorage.getItem("profileImgURL");r&&$(".profile img").attr("src",r),$(".profil")&&r&&$(".profil img").attr("src",r)}$(".profile").html('<img src="/pic/users/dummy.gif" class="profilePicture" alt="image">');

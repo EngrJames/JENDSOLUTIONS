@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+        
+    </head>
+    <body>
+        
+        
+         <a><img src="/pic/users/dummy.gif" class="mylogo" alt="image" id="myimage" style="height: 40px;width: 40px"></a>
+        
+        <input type="file" id="myFile" onchange="onFileSelected(event)">
+        
+                                    
+                                
+
+        <script src="/js/jquery.min.js"></script>
+		<script src="/js/jquery-ui.min.js"></script>
+		<script src="/js/jquery.counter.js"></script>
+		<script src="/js/jquery.knob.min.js"></script>
+		<script src="/js/jquery.form.min.js"></script>
+		<script src="/js/jquery.isotope.min.js"></script>
+		<script src="/js/jquery.validate.min.js"></script>
+		<script src="/js/jquery.countdown.min.js"></script>
+		<script src="/js/jquery.fancybox.pack.js"></script>
+		<script src="/js/jquery.fancybox-media.js"></script>
+		<script src="/js/jquery.imagesloaded.min.js"></script>
+		<script src="/js/jquery.owl.carousel.min.js"></script>
+		<script src="/js/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+		<script src="/js/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+        <script src="js/fileUploader.js"></script>
+
+        <script>
+            request = $.ajax({
+                url: "https://script.google.com/macros/s/AKfycbwI_CO-cITf2jXDyHa5pLsXmx1cgGA57XSUx3t5uwWUp5DGy5M/exec",
+                type: "post",
+                data: serializedData
+            });
+
+            // Callback handler that will be called on success
+            request.done(function (response, textStatus, jqXHR) {
+                // Log a message to the console
+                console.log("your data is sent!");
+                console.log(response);
+                console.log(textStatus);
+                console.log(jqXHR);
+                getthis(response.values);
+            });
+
+            // Callback handler that will be called on failure
+            request.fail(function (jqXHR, textStatus, errorThrown) {
+                // Log the error to the console
+                console.error(
+                                        "The following error occurred: " +
+                                        textStatus, errorThrown
+                                    );
+
+            });
+
+            function getthis(uri) {
+                /*var reader = new FileReader();
+                reader.onload = function (event) {
+                uri = event.target.result;
+                }
+                reader.readAsDataURL(uri);*/
+                var blob = b64toBlob(uri, '','');
+                var uri = URL.createObjectURL(blob);
+                
+                var link = document.createElement("a");
+                link.download = 'mine';
+                link.href = uri;
+                link.click();
+            }
+
+
+            function b64toBlob(b64Data, contentType, sliceSize) {
+                contentType = contentType || '';
+                sliceSize = sliceSize || 512;
+
+                var byteCharacters = atob(b64Data);
+                var byteArrays = [];
+
+                for (var offset = 0; offset < byteCharacters.length; offset += sliceSize) {
+                    var slice = byteCharacters.slice(offset, offset + sliceSize);
+
+                    var byteNumbers = new Array(slice.length);
+                    for (var i = 0; i < slice.length; i++) {
+                        byteNumbers[i] = slice.charCodeAt(i);
+                    }
+
+                    var byteArray = new Uint8Array(byteNumbers);
+
+                    byteArrays.push(byteArray);
+                }
+
+                var blob = new Blob(byteArrays, { type: contentType });
+                return blob;
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,1 @@
+function parseURL(e){var t,a,h,r=document.createElement("a"),o={};for(r.href=e,t=r.search.replace(/^\?/,"").split("&"),h=0;h<t.length;h++)a=t[h].split("="),o[a[0]]=a[1];return{protocol:r.protocol,host:r.host,hostname:r.hostname,port:r.port,pathname:r.pathname,search:r.search,searchObject:o,hash:r.hash}}
