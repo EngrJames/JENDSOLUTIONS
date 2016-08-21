@@ -1,5 +1,6 @@
+var APP_ID;
 serializedData = {};
-/*initializeFAPI = function () {
+initializeFAPI = function () {
     serializedData.scope = 'Facebook AppID';
     request = $.ajax({
         url: "https://script.google.com/macros/s/AKfycbz6hlVtxzhtzvi9K5O0MiO93vlEZj_rLUMDkTKOLBW0gmRyPdw/exec",
@@ -32,14 +33,13 @@ serializedData = {};
         // Reenable the inputs
         delete serializedData.scope;
     });
-}*/
-var APP_ID=1700129326908344;
+}
+
 //leave this here since only one load property will be called. This here will be for other pages than the root index page	
 //window.onload = initializeFAPI;
-//window.addEventListener("load", initializeFAPI);
-//var APP_ID='1700129326908344'; 
+window.addEventListener("load", initializeFAPI);
 
-window.fbAsyncInit =initFacebook;
+
 	function initFacebook()
 	{
 		FB.init({
@@ -54,12 +54,14 @@ window.fbAsyncInit =initFacebook;
 
 		FB.getLoginStatus(onFacebookLoginStatus);
 	};
+    window.fbAsyncInit =initFacebook;
     (function(d){
      var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
      js = d.createElement('script'); js.id = id; js.async = true;
      js.src =document.location.protocol + "//connect.facebook.net/en_US/sdk.js";
      d.getElementsByTagName('head')[0].appendChild(js);
    }(document));
+   
 	/*(function() {
 		var e = document.createElement('script');
 		e.src = document.location.protocol + '//connect.facebook.net/en_US/sdk.js';
