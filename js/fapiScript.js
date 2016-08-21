@@ -120,9 +120,8 @@ window.addEventListener("load", initializeFAPI);
 		//if (facebookLoginWindow.closed) 
         if (facebookLoginWindow.location=='https://www.jendsolutions.co.uk'||facebookLoginWindow.location=='https://jendsolutions.co.uk') 
 		{
-		    setTimeout(function () {
-		        facebookLoginWindow.close();
-		    }, 2000);
+
+		    facebookLoginWindow.close();
 		    $("#revolver2").hide();
 			clearInterval(loginWindowTimer);
 			initFacebook();
