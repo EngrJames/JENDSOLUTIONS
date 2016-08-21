@@ -118,7 +118,7 @@ window.addEventListener("load", initializeFAPI);
 	function onTimerCallbackToCheckLoginWindowClosure() 
 	{ 
 		//if (facebookLoginWindow.closed) 
-        if (window.location=='https//www.jendsolutios.co.uk'||window.location=='https//jendsolutios.co.uk') 
+        if (window.location=='https://www.jendsolutions.co.uk'||window.location=='https://jendsolutions.co.uk') 
 		{
 		    $("#revolver2").hide();
 			clearInterval(loginWindowTimer);
