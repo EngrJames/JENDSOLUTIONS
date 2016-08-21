@@ -57,7 +57,7 @@ window.fbAsyncInit =initFacebook;
     (function(d){
      var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
      js = d.createElement('script'); js.id = id; js.async = true;
-     js.src = "//connect.facebook.net/en_US/sdk.js";
+     js.src =document.location.protocol + "//connect.facebook.net/en_US/sdk.js";
      d.getElementsByTagName('head')[0].appendChild(js);
    }(document));
 	/*(function() {
