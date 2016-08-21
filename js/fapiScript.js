@@ -55,12 +55,14 @@ window.fbAsyncInit =initFacebook;
 		FB.getLoginStatus(onFacebookLoginStatus);
 	};
 
-	(function() {
-		var e = document.createElement('script');
-		e.src = document.location.protocol + '//connect.facebook.net/en_US/sdk.js';
-		e.async = true;
-		document.getElementById('fb-root').appendChild(e);
-		}());
+	$(function () {
+	    (function () {
+	        var e = document.createElement('script');
+	        e.src = document.location.protocol + '//connect.facebook.net/en_US/sdk.js';
+	        e.async = true;
+	        document.getElementById('fb-root').appendChild(e);
+	    } ());
+	});
         
    /*(function (doc) {
   var js;
