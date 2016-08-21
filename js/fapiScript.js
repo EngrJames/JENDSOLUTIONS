@@ -9,17 +9,19 @@ initializeFAPI = function () {
 
     // Callback handler that will be called on success
     request.done(function (response, textStatus, jqXHR) {
-        
+
         // Log a message to the console
         console.log("your data is sent!"); // console.log(response); console.log(textStatus); console.log(jqXHR);
         APP_ID = response.values[0][0];
-        (function() {
-		var e = document.createElement('script');
-		e.src = document.location.protocol + '//connect.facebook.net/en_US/all.js';
-		e.async = true;
-		document.getElementById('fb-root').appendChild(e);
-		}());
-        initFacebook();
+        (function () {
+            var e = document.createElement('script');
+            e.src = document.location.protocol + '//connect.facebook.net/en_US/all.js';
+            e.async = true;
+            document.getElementById('fb-root').appendChild(e);
+        } ());
+        $(function () {
+            initFacebook();
+        });
         // scopes = response.values[0][1];
     });
 
