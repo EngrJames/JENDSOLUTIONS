@@ -13,13 +13,12 @@ initializeFAPI = function () {
         // Log a message to the console
         console.log("your data is sent!"); // console.log(response); console.log(textStatus); console.log(jqXHR);
         APP_ID = response.values[0][0];
-        (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) return;
-     js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/es_LA/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
+        (function() {
+		var e = document.createElement('script');
+		e.src = document.location.protocol + '//connect.facebook.net/en_US/all.js';
+		e.async = true;
+		document.getElementById('fb-root').appendChild(e);
+		}());
         //initFacebook();
         // scopes = response.values[0][1];
     });
