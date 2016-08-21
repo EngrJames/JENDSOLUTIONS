@@ -12,7 +12,8 @@ initializeFAPI = function () {
 
         // Log a message to the console
         console.log("your data is sent!"); // console.log(response); console.log(textStatus); console.log(jqXHR);
-        APP_ID = response.values[0][0];        
+        APP_ID = response.values[0][0];  
+        initFacebook();      
         // scopes = response.values[0][1];
     });
 
@@ -38,7 +39,7 @@ initializeFAPI = function () {
 window.addEventListener("load", initializeFAPI);
 var APP_ID;
 
-window.fbAsyncInit =initFacebook;
+//window.fbAsyncInit =initFacebook;
 	function initFacebook()
 	{
 		FB.init({
@@ -54,14 +55,14 @@ window.fbAsyncInit =initFacebook;
 		FB.getLoginStatus(onFacebookLoginStatus);
 	};
 
-	(function() {
+	/*(function() {
 		var e = document.createElement('script');
 		e.src = document.location.protocol + '//connect.facebook.net/en_US/all.js';
 		e.async = true;
 		document.getElementById('fb-root').appendChild(e);
-		}());
+		}());*/
         
-   /* (function (doc) {
+   (function (doc) {
   var js;
   var id = 'facebook-jssdk';
   var ref = doc.getElementsByTagName('script')[0];
@@ -73,7 +74,7 @@ window.fbAsyncInit =initFacebook;
   js.async = true;
   js.src = document.location.protocol +"//connect.facebook.net/en_US/all.js";
   ref.parentNode.insertBefore(js, ref);
-}(document));*/
+}(document));
 
 /*(function(d, s, id){
      var js, fjs = d.getElementsByTagName(s)[0];
