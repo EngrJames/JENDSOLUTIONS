@@ -20,7 +20,7 @@ initializeFAPI = function () {
             document.getElementById('fb-root').appendChild(e);
         } ());
         $(function () {
-            initFacebook();
+             initFacebook();
         });
         // scopes = response.values[0][1];
     });
