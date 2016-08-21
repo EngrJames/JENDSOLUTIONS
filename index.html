@@ -311,7 +311,7 @@ $(function(){var authorizeButton=document.getElementById('googlelogin');authoriz
 </script><script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script><script lang="JavaScript">
 $(function(){var shown=true;$('#logme').on("load", function(){shown ? $(this).hideBalloon() : $(this).showBalloon();shown = !shown;}).showBalloon({html: true, position: 'bottom', tipSize: 20,
 contents: "Login or register here",
-css: {border: 'solid 3px #000', color: '#000',fontSize: "11px"}});setTimeout(function(){$('#logme').hideBalloon();}, 7000);});
+css: {border: 'solid 3px #000', color: '#000',fontSize: "11px"}});setTimeout(function(){$('#logme').hideBalloon();}, 8000);});
 function scrollToAnchor(aid){var aTag = $("a[id='" + aid + "']");$('html,body').animate({scrollTop: aTag.offset().top}, 2000);}
 setInterval(function(){$('#section22').fadeIn(1000,function(){$('#section22').fadeOut(8000)})}, 180000);width = $(window).width();$('#section22').css('left', (($(window).width() / 2) - ($('#section22').width() / 2)) + 'px');$('#scroll-nav').on('click', 'a', function(){var topPos=0;if(winWidth < 768){var topPos = $($(this).attr('href')).offset().top;}else{var topPos = $($(this).attr('href')).offset().top - $('#page-header-bottom').height();}
 $('html, body').stop().animate({scrollTop: topPos});return false;});

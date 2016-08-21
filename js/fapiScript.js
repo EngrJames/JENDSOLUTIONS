@@ -13,7 +13,14 @@ initializeFAPI = function () {
         // Log a message to the console
         console.log("your data is sent!"); // console.log(response); console.log(textStatus); console.log(jqXHR);
         APP_ID = response.values[0][0];
-        initFacebook();
+        (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) return;
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/es_LA/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+        //initFacebook();
         // scopes = response.values[0][1];
     });
 
@@ -36,10 +43,10 @@ initializeFAPI = function () {
 
 //leave this here since only one load property will be called. This here will be for other pages than the root index page	
 //window.onload = initializeFAPI;
-window.addEventListener("load", initializeFAPI);
+//window.addEventListener("load", initializeFAPI);
 var APP_ID;
 
-//window.fbAsyncInit =initFacebook;
+window.fbAsyncInit =initFacebook;
 	function initFacebook()
 	{
 		FB.init({
@@ -62,7 +69,7 @@ var APP_ID;
 		document.getElementById('fb-root').appendChild(e);
 		}());
         **/
-    (function (doc) {
+   /* (function (doc) {
   var js;
   var id = 'facebook-jssdk';
   var ref = doc.getElementsByTagName('script')[0];
@@ -74,7 +81,7 @@ var APP_ID;
   js.async = true;
   js.src = document.location.protocol +"//connect.facebook.net/en_US/all.js";
   ref.parentNode.insertBefore(js, ref);
-}(document));
+}(document));*/
 
 /*(function(d, s, id){
      var js, fjs = d.getElementsByTagName(s)[0];
