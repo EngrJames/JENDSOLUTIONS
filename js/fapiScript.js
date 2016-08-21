@@ -55,12 +55,12 @@ window.fbAsyncInit =initFacebook;
 		FB.getLoginStatus(onFacebookLoginStatus);
 	};
 
-	/*(function() {
+	(function() {
 		var e = document.createElement('script');
-		e.src = document.location.protocol + '//connect.facebook.net/en_US/all.js';
+		e.src = document.location.protocol + '//connect.facebook.net/en_US/sdk.js';
 		e.async = true;
 		document.getElementById('fb-root').appendChild(e);
-		}());*/
+		}());
         
    /*(function (doc) {
   var js;
@@ -76,13 +76,13 @@ window.fbAsyncInit =initFacebook;
   ref.parentNode.insertBefore(js, ref);
 }(document));*/
 
-(function(d, s, id){
+/*(function(d, s, id){
      var js, fjs = d.getElementsByTagName(s)[0];
      if (d.getElementById(id)) {return;}
      js = d.createElement(s); js.id = id;
      js.src = "//connect.facebook.net/en_US/sdk.js";
      fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
+   }(document, 'script', 'facebook-jssdk'));*/
 
 	var facebookLoginWindow;
 	var loginWindowTimer;
