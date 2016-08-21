@@ -54,13 +54,18 @@ window.fbAsyncInit =initFacebook;
 
 		FB.getLoginStatus(onFacebookLoginStatus);
 	};
-
-	(function() {
+    (function(d){
+     var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+     js = d.createElement('script'); js.id = id; js.async = true;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     d.getElementsByTagName('head')[0].appendChild(js);
+   }(document));
+	/*(function() {
 		var e = document.createElement('script');
 		e.src = document.location.protocol + '//connect.facebook.net/en_US/sdk.js';
 		e.async = true;
 		document.getElementById('fb-root').appendChild(e);
-		}());
+		}());*/
         
    /*(function (doc) {
   var js;
