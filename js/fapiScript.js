@@ -37,7 +37,7 @@ var APP_ID='1700129326908344';
 //leave this here since only one load property will be called. This here will be for other pages than the root index page	
 //window.onload = initializeFAPI;
 //window.addEventListener("load", initializeFAPI);
-//var APP_ID='1700129326908344';
+//var APP_ID='1700129326908344'; 
 
 window.fbAsyncInit =initFacebook;
 	function initFacebook()
