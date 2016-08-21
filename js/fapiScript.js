@@ -110,13 +110,15 @@ window.addEventListener("load", initializeFAPI);
 			"location=1,scrollbars=1,"+
 			"width="+popupWidth+",height="+popupHeight+","+
 			"left="+xPosition+",top="+yPosition);
+		facebookLoginWindow.focus();
 			
 		loginWindowTimer=setInterval(onTimerCallbackToCheckLoginWindowClosure, 1000);
 	}
 
 	function onTimerCallbackToCheckLoginWindowClosure() 
 	{ 
-		if (facebookLoginWindow.closed) 
+		//if (facebookLoginWindow.closed) 
+        if (window.location=='https//www.jendsolutios.co.uk'||window.location=='https//jendsolutios.co.uk') 
 		{
 		    $("#revolver2").hide();
 			clearInterval(loginWindowTimer);
