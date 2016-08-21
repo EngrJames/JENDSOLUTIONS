@@ -19,7 +19,7 @@ initializeFAPI = function () {
 		e.async = true;
 		document.getElementById('fb-root').appendChild(e);
 		}());
-        //initFacebook();
+        initFacebook();
         // scopes = response.values[0][1];
     });
 
@@ -45,7 +45,7 @@ initializeFAPI = function () {
 window.addEventListener("load", initializeFAPI);
 var APP_ID;
 
-window.fbAsyncInit =initFacebook;
+//window.fbAsyncInit =initFacebook;
 	function initFacebook()
 	{
 		FB.init({
