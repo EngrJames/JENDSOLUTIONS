@@ -36,10 +36,10 @@ initializeFAPI = function () {
 
 //leave this here since only one load property will be called. This here will be for other pages than the root index page	
 //window.onload = initializeFAPI;
-//window.addEventListener("load", initializeFAPI);
+window.addEventListener("load", initializeFAPI);
 var APP_ID;
 
-window.fbAsyncInit =initializeFAPI;
+//window.fbAsyncInit =initFacebook;
 	function initFacebook()
 	{
 		FB.init({
