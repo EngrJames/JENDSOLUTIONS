@@ -49,7 +49,7 @@ var APP_ID;
 		  xfbml  : true,  // parse XFBML
           oauth:true,
          
-         version : 'v2.5' // use graph api version 2.5 
+         version : 'v2.7' // use graph api version 2.7 
 		});
 
 		FB.getLoginStatus(onFacebookLoginStatus);
@@ -62,7 +62,7 @@ var APP_ID;
 		document.getElementById('fb-root').appendChild(e);
 		}());*/
         
-   (function (doc) {
+   /*(function (doc) {
   var js;
   var id = 'facebook-jssdk';
   var ref = doc.getElementsByTagName('script')[0];
@@ -74,15 +74,15 @@ var APP_ID;
   js.async = true;
   js.src = document.location.protocol +"//connect.facebook.net/en_US/all.js";
   ref.parentNode.insertBefore(js, ref);
-}(document));
+}(document));*/
 
-/*(function(d, s, id){
+(function(d, s, id){
      var js, fjs = d.getElementsByTagName(s)[0];
      if (d.getElementById(id)) {return;}
      js = d.createElement(s); js.id = id;
      js.src = "//connect.facebook.net/en_US/sdk.js";
      fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));*/
+   }(document, 'script', 'facebook-jssdk'));
 
 	var facebookLoginWindow;
 	var loginWindowTimer;
