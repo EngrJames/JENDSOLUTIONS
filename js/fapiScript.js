@@ -129,7 +129,13 @@ var APP_ID;
 		{alert('response2');
 		    localStorage.setItem('FBStatus','connected');
 			FB.api("/me?fields=name,email,birthday", onMyInfoLoaded);
-		}
+		} else if (response.status === 'not_authorized') {
+                //some code
+            } else if (response.status === 'unknown') {
+                FB.login(function (response) {
+                    statusChangeCallback(response);
+                });
+            }
 	}  
 	
 	function onMyInfoLoaded(response)
