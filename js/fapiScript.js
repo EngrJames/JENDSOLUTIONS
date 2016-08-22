@@ -52,7 +52,7 @@ var APP_ID;
          version : 'v2.6' // use graph api version 2.5 
 		});
 
-		FB.getLoginStatus(onFacebookLoginStatus);
+		FB.getLoginStatus(onFacebookLoginStatus);alert('init');
 	};
 
 	/**(function() {
@@ -122,10 +122,10 @@ var APP_ID;
 	* Callback function for FB.login
 	*/
 	function onFacebookLoginStatus(response)
-	{
+	{alert('response1');
     //alert("onFacebookLoginStatus response.status="+response.status+" response.session="+response.session);  
 		if (response.status=="connected" && response.authResponse)
-		{
+		{alert('response2');
 		    localStorage.setItem('FBStatus','connected');
 			FB.api("/me?fields=name,email,birthday", onMyInfoLoaded);
 		}
