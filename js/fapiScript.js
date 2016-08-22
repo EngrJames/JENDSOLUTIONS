@@ -49,10 +49,10 @@ var APP_ID;
 		  xfbml  : true,  // parse XFBML
           oauth:true,
          channelUrl: 'https://www.jendsolutions.co.uk/channel.html',
-         version : 'v2.6' // use graph api version 2.5 
+         version : 'v2.6' // use graph api version 2.6 
 		});
 
-		FB.getLoginStatus(onFacebookLoginStatus);alert('init');
+		FB.getLoginStatus(onFacebookLoginStatus);
 	};
 
 	/**(function() {
