@@ -38,7 +38,7 @@ initializeFAPI = function () {
 //leave this here since only one load property will be called. This here will be for other pages than the root index page	
 //window.onload = initializeFAPI;
 window.addEventListener("load", initializeFAPI);
-
+window.fbAsyncInit =initFacebook;
 
 	function initFacebook()
 	{
@@ -54,11 +54,11 @@ window.addEventListener("load", initializeFAPI);
 
 		FB.getLoginStatus(onFacebookLoginStatus);
 	};
-    window.fbAsyncInit =initFacebook;
+    
     (function(d){
      var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
      js = d.createElement('script'); js.id = id; js.async = true;
-     js.src =document.location.protocol + "//connect.facebook.net/en_US/sdk.js";
+     js.src =document.location.protocol + "//connect.facebook.net/en_US/all.js";
      d.getElementsByTagName('head')[0].appendChild(js);
    }(document));
    
