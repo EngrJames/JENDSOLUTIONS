@@ -122,16 +122,16 @@ var APP_ID;
 	* Callback function for FB.login
 	*/
 	function onFacebookLoginStatus(response)
-	{alert('response1');
+	{
     alert(response.status);alert(response.authResponse);
     //alert("onFacebookLoginStatus response.status="+response.status+" response.session="+response.session);  
 		if (response.status=="connected" && response.authResponse)
 		{alert('response2');
 		    localStorage.setItem('FBStatus','connected');
 			FB.api("/me?fields=name,email,birthday", onMyInfoLoaded);
-		} else if (response.status === 'not_authorized') {
+		} else if (response.status == 'not_authorized') {
                 //some code
-            } else if (response.status === 'unknown') {
+            } else if (response.status == 'unknown') {
                 FB.login(function (response) {
                     statusChangeCallback(response);alert(response.status)
                 });
