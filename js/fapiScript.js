@@ -52,7 +52,7 @@ var APP_ID;
          version : 'v2.6' // use graph api version 2.6 
 		});
 
-		FB.getLoginStatus(onFacebookLoginStatus,true);
+		FB.getLoginStatus(onFacebookLoginStatus);
 	};
 
 	/**(function() {
@@ -72,7 +72,7 @@ var APP_ID;
   js = doc.createElement('script');
   js.id = id;
   js.async = true;
-  js.src = document.location.protocol +"//connect.facebook.net/en_US/all.js";
+  js.src = document.location.protocol +"//connect.facebook.net/en_US/sdk.js";
   ref.parentNode.insertBefore(js, ref);
 }(document));
 
