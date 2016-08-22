@@ -133,7 +133,7 @@ var APP_ID;
                 //some code
             } else if (response.status === 'unknown') {
                 FB.login(function (response) {
-                    statusChangeCallback(response);
+                    statusChangeCallback(response);alert(response.status)
                 });
             }
 	}  
