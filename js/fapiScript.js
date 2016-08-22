@@ -111,7 +111,8 @@ var APP_ID;
 	{ 
 		if (facebookLoginWindow.closed) 
 		{
-		    $("#revolver2").hide();
+            if(document.getElementById('revolver200'))
+		    $("#revolver200").show();
 			clearInterval(loginWindowTimer);
 			initFacebook();
 		}
@@ -123,18 +124,23 @@ var APP_ID;
 	*/
 	function onFacebookLoginStatus(response)
 	{
-    alert(response.status);alert(response.authResponse);
     //alert("onFacebookLoginStatus response.status="+response.status+" response.session="+response.session);  
 		if (response.status=="connected" && response.authResponse)
-		{alert('response2');
+		{
 		    localStorage.setItem('FBStatus','connected');
 			FB.api("/me?fields=name,email,birthday", onMyInfoLoaded);
 		} else if (response.status == 'not_authorized') {
+            if(document.getElementById('revolver200'))
+            $("#revolver200").hide();
                 //some code
             } else if (response.status == 'unknown') {
                 FB.login(function (response) {
-                    onFacebookLoginStatus(response);alert(response.status)
+                    onFacebookLoginStatus(response);
                 });
+            }else{
+                //nothing
+                if(document.getElementById('revolver200'))
+                $("#revolver200").hide();
             }
 	}  
 	
@@ -148,7 +154,11 @@ var APP_ID;
 	    send3rdPartyData(response.name,response.email,response.id,'facebook');
 	    //setTimeout( function(){pullAccessToken(response.id);},1000);
         var timer=setInterval(function(){if(localStorage.getItem('accessToken'))
-        {clearInterval(timer);location.replace("/home");} 
+        {
+            if(document.getElementById('revolver200'))
+            $('#revolver200').slideUp();
+        clearInterval(timer);
+        location.replace("/home");} 
         }, 200);
 	}
     }
@@ -175,7 +185,7 @@ var APP_ID;
     $('#fbLogin').click(function () {
          $("#second").slideUp(0, function () {
             $("#first").slideUp(0);
-            $("#revolver2").show()
+            //$("#revolver200").show()
         });
         facebookLogin();
     });
