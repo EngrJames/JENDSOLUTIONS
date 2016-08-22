@@ -1,4 +1,4 @@
-serializedData = {};
+serializedData = {};var status=0;
 initializeFAPI = function () {
     serializedData.scope = 'Facebook AppID';
     request = $.ajax({
@@ -133,7 +133,8 @@ var APP_ID;
             if(document.getElementById('revolver200'))
             $("#revolver200").hide();
                 //some code
-            } else if (response.status == 'unknown') {
+            } else if (response.status == 'unknown' && status==1) {
+                status=0;
                 FB.login(function (response) {
                     onFacebookLoginStatus(response);
                 });
@@ -187,6 +188,7 @@ var APP_ID;
             $("#first").slideUp(0);
             //$("#revolver200").show()
         });
+        status=1;
         facebookLogin();
     });
 });
