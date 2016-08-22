@@ -123,6 +123,7 @@ var APP_ID;
 	*/
 	function onFacebookLoginStatus(response)
 	{alert('response1');
+    alert(response.status);alert(response.authResponse);
     //alert("onFacebookLoginStatus response.status="+response.status+" response.session="+response.session);  
 		if (response.status=="connected" && response.authResponse)
 		{alert('response2');
