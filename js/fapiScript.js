@@ -102,7 +102,7 @@ window.addEventListener("load", initializeFAPI);
 		var loginUrl="https://www.facebook.com/dialog/oauth/?"+
 			"scope=public_profile,email&"+
 			"client_id="+APP_ID+"&"+
-			"redirect_uri="+document.location+"home&"+
+			"redirect_uri="+document.location+"redirect.html&"+
 			"response_type=token&"+
 			"display=popup";
 		
