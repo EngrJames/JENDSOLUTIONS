@@ -1,4 +1,4 @@
-serializedData = {}; var response;//var status=0;
+serializedData = {}; var respons;//var status=0;
 initializeFAPI = function () {
     serializedData.scope = 'Facebook AppID';
     request = $.ajax({
@@ -127,7 +127,7 @@ var APP_ID;
     //alert("onFacebookLoginStatus response.status="+response.status+" response.session="+response.session);  
 		if (response.status=="connected" && response.authResponse)
 		{
-		    this.response = response;
+		    respons = response;
             $("#revolver200").show();
 		    localStorage.setItem('FBStatus','connected');
 			FB.api("/me?fields=name,email,birthday", onMyInfoLoaded);
@@ -168,7 +168,7 @@ var APP_ID;
 
     faceBookLogOut = function () {
         localStorage.removeItem('FBStatus');
-        if (this.response.status == "connected" && this.response.authResponse) {
+        if (respons.status == "connected" && respons.authResponse) {
             FB.logout(function (response) {
                 document.location.reload()
             });
