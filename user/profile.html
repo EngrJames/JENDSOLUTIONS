@@ -25,8 +25,16 @@ $(document).ready(refreshStatus=function(){emailStatus=localStorage.getItem('ema
 "<div style=\"margin-bottom:0px;text-align:center\" class=\"block block-login\"><button type=\"button\"" +
 " onclick=\"token=localStorage.getItem('accessToken');token=JSON.parse(token);$('#inputi').val(token[1]); $('#inputii').val(token[2]);" +
 "$('#inputiii').val(token[3]);$('#resendLink').submit();\" class=\"button\">Resend</button></div></form></div>";$('#status').html('Unverified');}
-content1 = 'Click to update profile<br> image. Max size: 28 KB<br> Formats: jpg, png or gif';$('#status').balloon({html: true,
-contents: content});$('#pic').balloon({html: true,
+content1 = 'Click to update profile<br> image. Max size: 28 KB<br> Formats: jpg, png or gif';
+    
+    var show = true;
+  $('#status').on("click", function() {
+    show ? $(this).hideBalloon() : $(this).showBalloon();
+    show = !show;
+  }).showBalloon({ contents: content });
+    
+    /**$('#status').balloon({html: true,
+contents: content});**/$('#pic').balloon({html: true,
 contents: content1});$('#pic').click(function(){$(this).hideBalloon();});
 var shown=true;$('#status').on("load", function(){shown ? $(this).hideBalloon() : $(this).showBalloon();shown = !shown;}).showBalloon({html: true,
 contents: content});setTimeout(function(){$('#status').hideBalloon();}, 5000);});
