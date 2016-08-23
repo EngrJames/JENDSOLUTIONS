@@ -52,7 +52,7 @@ var APP_ID;
          version : 'v2.6' // use graph api version 2.6 
 		});
 
-		//FB.getLoginStatus(onFacebookLoginStatus);
+		FB.getLoginStatus(onFacebookLoginStatus);
 	};
 
 	/**(function() {
