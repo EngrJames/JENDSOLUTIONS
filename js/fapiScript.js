@@ -132,10 +132,12 @@ var APP_ID;
 		    localStorage.setItem('FBStatus','connected');
 			FB.api("/me?fields=name,email,birthday", onMyInfoLoaded);
 		} else if (response.status == 'not_authorized') {
+            respons = response;
             if(document.getElementById('revolver200'))
             $("#revolver200").hide();
                 //some code
             } else if (response.status == 'unknown' /**&& status==1**/) {
+                respons = response;
                // status=0;
                 /*FB.login(function (response) {
                     onFacebookLoginStatus(response);
