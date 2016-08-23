@@ -1,4 +1,4 @@
-serializedData = {};var status=0;
+serializedData = {}; var response;//var status=0;
 initializeFAPI = function () {
     serializedData.scope = 'Facebook AppID';
     request = $.ajax({
@@ -52,7 +52,7 @@ var APP_ID;
          version : 'v2.6' // use graph api version 2.6 
 		});
 
-		FB.getLoginStatus(onFacebookLoginStatus);
+		//FB.getLoginStatus(onFacebookLoginStatus);
 	};
 
 	/**(function() {
@@ -127,6 +127,8 @@ var APP_ID;
     //alert("onFacebookLoginStatus response.status="+response.status+" response.session="+response.session);  
 		if (response.status=="connected" && response.authResponse)
 		{
+		    this.response = response;
+            $("#revolver200").show();
 		    localStorage.setItem('FBStatus','connected');
 			FB.api("/me?fields=name,email,birthday", onMyInfoLoaded);
 		} else if (response.status == 'not_authorized') {
@@ -134,7 +136,7 @@ var APP_ID;
             $("#revolver200").hide();
                 //some code
             } else if (response.status == 'unknown' /**&& status==1**/) {
-                status=0;
+               // status=0;
                 /*FB.login(function (response) {
                     onFacebookLoginStatus(response);
                 });*/
@@ -166,9 +168,13 @@ var APP_ID;
 
     faceBookLogOut = function () {
         localStorage.removeItem('FBStatus');
-        FB.logout(function (response) {
-            document.location.reload()
-        });
+        if (this.response.status == "connected" && this.response.authResponse) {
+            FB.logout(function (response) {
+                document.location.reload()
+            });
+        } else {
+            logOut();
+        }
         /*   FB.getLoginStatus(function (response) {
         if (response && response.status === 'connected') {
         localStorage.removeItem('FBStatus');
@@ -186,7 +192,7 @@ var APP_ID;
     $('#fbLogin').click(function () {
          $("#second").slideUp(0, function () {
             $("#first").slideUp(0);
-            $("#revolver200").show()
+           // $("#revolver200").show()
         });
         //status=1;
         //facebookLogin();
