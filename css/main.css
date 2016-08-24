@@ -9307,7 +9307,7 @@ noindex:-o-prefocus, .asset-nav { /* opera hack */
 		display: none;
 	}
 }
-@media screen and (max-width: 479px) { /* mini phone */
+@media screen and (max-width: 479px) and (orientation:portrait){ /* mini phone */
 	.block-catalog-list li {
 		padding-left: 0;
 	}
@@ -9334,6 +9334,22 @@ noindex:-o-prefocus, .asset-nav { /* opera hack */
 }
 }
 
+
+@media screen and (max-width: 479px) and (orientation:landscape){ /* mini phone */
+	.block-catalog-list li {
+		padding-left: 0;
+	}
+	/*.block-catalog-list li:before {
+		display: none;
+	}*/
+	.block-catalog-list .pic {
+		position: absolute;
+	}
+
+.block-catalog-list .pic img {
+	position: absolute;
+}
+}
 /**/
 /* product details */
 /**/
