@@ -9306,14 +9306,17 @@ noindex:-o-prefocus, .asset-nav { /* opera hack */
 	.block-catalog-list .actions .more {
 		display: none;
 	}
+.block-catalog-list li {
+		padding-left: 0;
+	}
 }
 @media screen and (max-width: 479px) { /* mini phone */
 	.block-catalog-list li {
 		padding-left: 0;
 	}
-	/*.block-catalog-list li:before {
+	.block-catalog-list li:before {
 		display: none;
-	}*/
+	}
 	.block-catalog-list .pic {
 		position: relative;
 		width: auto;
@@ -9323,13 +9326,13 @@ noindex:-o-prefocus, .asset-nav { /* opera hack */
 
 .block-catalog-list .pic img {
     position: absolute ;
-	top: 0;
+	/*top: 0;
 	right: 0;
 	bottom: 0;
-	left: 0;
+	left: 0;*/
 	width: 100%;
-	height: 200px;
-	margin: auto;
+	height: 100%;
+	/*margin: auto;*/
 }
 }
 
