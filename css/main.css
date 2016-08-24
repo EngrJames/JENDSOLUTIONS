@@ -9307,6 +9307,9 @@ noindex:-o-prefocus, .asset-nav { /* opera hack */
 	.block-catalog-list .actions .more {
 		display: none;
 	}
+.block-catalog-list .pic:after {
+	position: relative;
+}
     
 }
 @media screen and (max-width: 479px) { /* mini phone */
