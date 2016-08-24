@@ -9311,9 +9311,9 @@ noindex:-o-prefocus, .asset-nav { /* opera hack */
 	.block-catalog-list li {
 		padding-left: 0;
 	}
-	.block-catalog-list li:before {
+	/**.block-catalog-list li:before {
 		display: none;
-	}
+	}**/
 	.block-catalog-list .pic {
 		position: relative;
 		width: auto;
