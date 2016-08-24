@@ -9323,7 +9323,7 @@ noindex:-o-prefocus, .asset-nav { /* opera hack */
 
 .block-catalog-list .pic img {
 	/*position: absolute;*/
-    position: relative;
+    position: absolute ;
 	top: 0;
 	right: 0;
 	bottom: 0;
