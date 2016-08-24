@@ -9311,11 +9311,11 @@ noindex:-o-prefocus, .asset-nav { /* opera hack */
 	.block-catalog-list li {
 		padding-left: 0;
 	}
-	.block-catalog-list li:before {
-		display: block;
-	}
+	/*.block-catalog-list li:before {
+		display: none;
+	}*/
 	.block-catalog-list .pic {
-		position: relative;
+		/*position: relative;*/
 		width: auto;
 		height: 200px;
 		border-bottom: 1px solid #ecf0f1;
