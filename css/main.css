@@ -9321,7 +9321,7 @@ noindex:-o-prefocus, .asset-nav { /* opera hack */
 		border-bottom: 1px solid #ecf0f1;
 	}
 
-/*.block-catalog-list .pic img {
+.block-catalog-list .pic img {
     position: absolute ;
 	top: 0;
 	right: 0;
@@ -9330,7 +9330,7 @@ noindex:-o-prefocus, .asset-nav { /* opera hack */
 	width: 100%;
 	height: 100%;
 	margin: auto;
-}*/
+}
 }
 
 /**/
