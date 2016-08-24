@@ -9315,14 +9315,15 @@ noindex:-o-prefocus, .asset-nav { /* opera hack */
 		display: none;
 	}*/
 	.block-catalog-list .pic {
-		/*position: relative;*/
+		position: relative;
 		width: auto;
 		height: 200px;
 		border-bottom: 1px solid #ecf0f1;
 	}
 
 .block-catalog-list .pic img {
-	position: absolute;
+	/*position: absolute;*/
+    position: absolute;
 	top: 0;
 	right: 0;
 	bottom: 0;
