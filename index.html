@@ -291,7 +291,7 @@ textStatus, errorThrown
 );});
 
 request.always(function(){delete serializedData.scope;});},200);}
-/*window.onload=initializeAPI;*/</script><!--<script src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script>--><!--<script src="https://apis.google.com/js/client.js?onload=initializeAPI"></script>--><!--<script src="https://apis.google.com/js/client.js?onload=initializeAPI" defer>--></script><script type="text/javascript" src="js/getData.js"></script><script type="text/javascript" src="js/balloon.js"></script><script type="text/javascript" src="/js/URLParser.js"></script><script src="js/main.js"></script><script>
+/*window.onload=initializeAPI;*/</script><!--<script src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script>--><!--<script src="https://apis.google.com/js/client.js?onload=initializeAPI"></script>--><script src="https://apis.google.com/js/client.js?onload=initializeAPI" defer></script><script type="text/javascript" src="js/getData.js"></script><script type="text/javascript" src="js/balloon.js"></script><script type="text/javascript" src="/js/URLParser.js"></script><script src="js/main.js"></script><script>
 var correctCaptcha1=function (response) {if(response){$('#login').loginQuerySend();}}
 var correctCaptcha2=function (response) {if(response){$('#regist').registerQuerySend();}}
 var correctCaptcha3=function (response) {if(response){$('#form').submit();}}
@@ -310,7 +310,7 @@ var onloadCallback=function(){myCatcha1=grecaptcha.render('html_element1', {'sit
 'theme': 'dark'});};
 
 $(function(){var authorizeButton=document.getElementById('googlelogin');authorizeButton.onclick=handleAuthClick;});
-</script><script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script><script lang="JavaScript">
+</script><!--<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer>--></script><script lang="JavaScript">
 $(function(){var shown=true;$('#logme').on("load", function(){shown ? $(this).hideBalloon() : $(this).showBalloon();shown = !shown;}).showBalloon({html: true, position: 'bottom', tipSize: 20,
 contents: "Login or register here",
 css: {border: 'solid 3px #000', color: '#000',fontSize: "11px"}});setTimeout(function(){$('#logme').hideBalloon();}, 8000);});
