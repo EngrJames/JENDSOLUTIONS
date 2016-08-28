@@ -310,7 +310,7 @@ var onloadCallback=function(){myCatcha1=grecaptcha.render('html_element1', {'sit
 'theme': 'dark'});};
 
 $(function(){var authorizeButton=document.getElementById('googlelogin');authorizeButton.onclick=handleAuthClick;});
-</script><script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script><script lang="JavaScript">
+</script><script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" defer></script><script lang="JavaScript">
 $(function(){var shown=true;$('#logme').on("load", function(){shown ? $(this).hideBalloon() : $(this).showBalloon();shown = !shown;}).showBalloon({html: true, position: 'bottom', tipSize: 20,
 contents: "Login or register here",
 css: {border: 'solid 3px #000', color: '#000',fontSize: "11px"}});setTimeout(function(){$('#logme').hideBalloon();}, 8000);});
