@@ -297,7 +297,7 @@ var correctCaptcha2=function (response) {if(response){$('#regist').registerQuery
 var correctCaptcha3=function (response) {if(response){$('#form').submit();}}
 var correctCaptcha4=function (response) {if(response){$('#form1').newsLetterQuerySend();}}
 var correctCaptcha5=function (response) {if(response){$('#forgotinfo').checkForgotInfo();}}
-var onloadCallback=function(){setTimeout(function(){  myCatcha1=grecaptcha.render('html_element1', {'sitekey': '6Lc8MiATAAAAAHq-FSTlENtz0dfesp2hX2MMIjTU',
+var onloadCallback=function(){$(function(){  myCatcha1=grecaptcha.render('html_element1', {'sitekey': '6Lc8MiATAAAAAHq-FSTlENtz0dfesp2hX2MMIjTU',
 'callback': correctCaptcha1,
 'theme': 'dark'});myCatcha2=grecaptcha.render('html_element2', {'sitekey': '6Lc8MiATAAAAAHq-FSTlENtz0dfesp2hX2MMIjTU',
 'callback': correctCaptcha2,
@@ -307,7 +307,7 @@ var onloadCallback=function(){setTimeout(function(){  myCatcha1=grecaptcha.rende
 'callback': correctCaptcha4,
 'theme': 'dark'});myCatcha5=grecaptcha.render('html_element5', {'sitekey': '6Lc8MiATAAAAAHq-FSTlENtz0dfesp2hX2MMIjTU',
 'callback': correctCaptcha5,
-'theme': 'dark'});},3000);};
+'theme': 'dark'});});};
 
 $(function(){var authorizeButton=document.getElementById('googlelogin');authorizeButton.onclick=handleAuthClick;});
 </script><script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script><script lang="JavaScript">
